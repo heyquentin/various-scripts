@@ -13,7 +13,7 @@ def parser(feedtitle, url, textColor):
         print(str(listCount) + ": " + d['entries'][counter]['title'])
         counter +=1
         listCount +=1
-    time.sleep(10)
+    time.sleep(30)
     counter = 0
     listCount = 1
     os.system('clear')
