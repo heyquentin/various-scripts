@@ -19,5 +19,11 @@ def parser(feedtitle, url, textColor):
     os.system('clear')
 
 while True:
-    parser('Reddit Vancouver', 'http://www.reddit.com/r/vancouver/new/.rss', 'green')
-    parser('PC Sales', 'http://www.reddit.com/r/bapcsalescanada/new/.rss', 'red')
+    try:
+        parser('Reddit Vancouver', 'http://www.reddit.com/r/vancouver/new/.rss', 'green')
+        parser('PC Sales', 'http://www.reddit.com/r/bapcsalescanada/new/.rss', 'red')
+    except:
+        print("Hey something went wrong. I'll try again in a sec")
+        time.sleep(30)
+        os.system('clear')
+        continue
