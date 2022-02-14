@@ -10,10 +10,10 @@ def parser(feedtitle, url, textColor):
     print(colored(feedtitle, textColor))
     d = feedparser.parse(url)
     while (counter <=4):
-        print(d['entries'][counter]['title'])
+        print(str(listCount) + ": " + d['entries'][counter]['title'])
         counter +=1
         listCount +=1
-    time.sleep(30)
+    time.sleep(10)
     counter = 0
     listCount = 1
     os.system('clear')
